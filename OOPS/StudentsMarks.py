@@ -13,8 +13,17 @@ class StudentsMarks:
     def get_student_details(self):
         print(f"The student id is {self.id}")
         print(f"The student Mark is {self.smarks}")
-        
-
+    @staticmethod
+    def find_student_grade(x):
+        if x>35:
+            return ("First Grade")        
+        elif x>30:
+            return ("Second Grade")
+        elif x>25:
+            return ("Third Grade")
+        else:
+            return ("Failed")
+            
 s1=StudentsMarks()
 s1.set_student_details(122,40)
 s2=StudentsMarks()
@@ -24,3 +33,5 @@ s1.get_student_details()
 print("Student 2 detail : ")
 s2.get_student_details()
 StudentsMarks.get_college_details()
+print(f"The student Grade is : {StudentsMarks.find_student_grade(30)}") 
+
